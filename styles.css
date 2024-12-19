@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+     --Very-dark-blue: hsl(240, 100%, 5%);
+}
+body, html {
+    background: var(--Off-white);
+    scroll-behavior: smooth;
+    font-family: 'inter' sans-serif;
+    height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 60px;
+    text-transform: capitalize;
+    position: sticky;
+    z-index: 100;
+}
+.logo p {
+    font-weight: 800;
+    font-size: 64px;
+    color: var(--Very-dark-blue);
+}
+nav .hidden-nav-link {
+    display: none;
+    cursor: pointer;
+}
+nav .visible-nav-links {
+    display: flex;
+}
+.visible-nav-links li {
+    list-style-type: none;
+    margin-right: 20px;
+}
+.visible-nav-links a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+}
+a:hover {
+    color: var(--Soft-red);
+}
+a:active {
+    color: var(--Very-dark-blue);
+}
+.hero-section {
+    padding: 23px 60px;
+}
+
+.hero-section .parent-container {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 20px;
+}
+.hero-section .parent-container .hero-container-1 .description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 20px;
+}
+.hero-section .parent-container .hero-container-1 .description h1 {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 1;
+}
+.hero-section .parent-container .hero-container-1 .description p {
+    color: var(--grayish-blue);
+    margin-bottom: 20px;
+}
+.hero-section .parent-container .hero-container-1 .description button {
+    padding: 8px 19px;
+    background: var(--Soft-red);
+    border: none;
+    text-transform: uppercase;
+    color: var(--Very-dark-blue);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.hero-section .parent-container .hero-container-2 {
+    background: var(--Very-dark-blue);
+    color: var(--Off-white);
+    padding: 23px 60px;
+}
+.hero-section .parent-container .hero-container-2 h2 {
+    margin-bottom: 20px;
+    color: var(--Soft-orange);
+    font-size: 32px;
+    font-weight: 700;
+}
+.hero-section .parent-container .hero-container-2 p {
+    margin-top: 5px;
+    color: var(--Dark-grayish-blue);
+}
+.hero-section .parent-container .hero-container-2 hr {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid var(--Dark-grayish-blue);
+}
+.news-container {
+    padding: 30px 60px;
+}
+.news-container .news-letter   {
+    display: flex;
+}
+.news-container .news-letter .image-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.news-container .news-letter .image-wrapper .image-description {
+    white-space: nowrap;
+}
+.news-container .news-letter .image-wrapper .image-description .number {
+    color: var(--Soft-red);
+    font-size: 24px;
+    font-weight: 700;
+}
+.news-container .news-letter .image-wrapper .image-description h4 {
+    color: var(--Very-dark-blue);
+    font-size: 20px;
+    font-weight: 700;
+}
+.news-container .news-letter .image-wrapper .image-description .text {
+    color: var(--grayish-blue);
+}
+@media only screen and (max-width: 768px) {
+    nav .hidden-nav-link {
+        display: block;
+        cursor: pointer;
+    }
+nav .visible-nav-links {
+    display: none;
+}
+.hero-section .parent-container {
+    display: block;
+}
+.hero-section .parent-container .hero-container-1 img {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+}
+.hero-section {
+    padding: 10px 20px;
+}
+body, html {
+    background: var(--Off-white);
+    scroll-behavior: smooth;
+    font-family: 'inter' sans-serif;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+nav {
+display: flex;
+justify-content: space-between;
+padding: 10px 20px;
+text-transform: capitalize;
+position: sticky;
+z-index: 100;
+}
+.hero-section .parent-container .hero-container-1 .description {
+    display: block;
+    padding: 10px 20px;
+}
+.hero-section .parent-container .hero-container-2 {
+    background: var(--Very-dark-blue);
+    color: var(--Off-white);
+    margin: 30px 10px;
+}
+.news-container {
+    padding: 10px 20px;
+}
+.news-container .news-letter   {
+    display: block;
+}
+.news-container .news-letter .image-wrapper {
+    display: flex;
+    margin-bottom: 20px;
+}
+}
